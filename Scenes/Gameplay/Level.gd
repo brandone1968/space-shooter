@@ -6,6 +6,9 @@ func _ready():
 	$ScoreHandler.connect("multiplierChanged", self, "showMultiplier")
 	$AddPoints.connect("pressed", self, "addShipDestroyedPoints")
 	$ResetMultiplier.connect("pressed", $ScoreHandler, "resetMultiplier")
+	#enable physics process on the spaceship
+	#once the level is ready
+	$Spaceship.set_physics_process(true)
 
 
 func addShipDestroyedPoints():
@@ -18,4 +21,5 @@ func showPoints(points):
 
 func showMultiplier(multiplier):
 	$Score/Multiplier.text = str("x", multiplier)
+
 
