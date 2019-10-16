@@ -56,6 +56,9 @@ __meta__ = {
 }
 
 [node name="ScrollingBackground" parent="." instance=ExtResource( 2 )]
+updateScreen = false
+reset = false
+testAnimation = false
 distance = 800
 
 [node name="ScrollingFarBuildings" parent="." instance=ExtResource( 3 )]
